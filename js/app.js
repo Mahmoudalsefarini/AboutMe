@@ -1,8 +1,12 @@
 'use strict';
+let score = 0;
+let userName = prompt('whats your name?')
+alert('welcome  '  + userName);
 let travil = prompt('Do you think i like to travil ?');
 switch (travil.toLowerCase()) {
     case 'yes':
     case 'y':
+        score++;
         //console.log('thats right i do like traviling');  
         alert('thats right i do like traviling')
         break;
@@ -15,6 +19,7 @@ let age = prompt('Do you think im older than 27 years ?');
 switch (age.toLowerCase()) {
     case 'yes':
     case 'y':
+        score++;
         //console.log('thats not right , im 26');  
         alert('thats not right , im 26')
         break;
@@ -27,6 +32,7 @@ let home = prompt('Do you think i live in amman ?');
 switch (home.toLowerCase()) {
     case 'yes':
     case 'y':
+        score++;
         //console.log('thats right , i live in Amman ');  
         alert('thats right , i live in Amman')
         break;
@@ -39,6 +45,7 @@ let tall = prompt('Do you think im taller than 180 cm ?');
 switch (tall.toLowerCase()) {
     case 'yes':
     case 'y':
+        score++;
         //console.log('thats right');  
         alert('thats right ')
         break;
@@ -51,6 +58,7 @@ let major = prompt('Do you think my major is Computer science ?');
 switch (major.toLowerCase()) {
     case 'yes':
     case 'y':
+        score++;
         //console.log('thats not right');  
         alert('thats not right ')
         break;
@@ -59,9 +67,6 @@ switch (major.toLowerCase()) {
         //console.log('thats right < my major is civil enginner !')
         alert('thats right < my major is civil enginner !');
 }
-
-
-let score = 0;
 let guessNumber = null;
 for (let x = 0; x < 4; x++) {
 
@@ -69,8 +74,8 @@ for (let x = 0; x < 4; x++) {
     guessNumber = Number(guessNumber);
 
     if (guessNumber === 30) {
-        score++;
         alert('The number is correct');
+        score++;
         break;
     } else if (guessNumber < 30) {
         alert('you are too low , try again')
@@ -95,3 +100,4 @@ for (let i = 0; i < 6; i++) {
         break;
     }
 }
+alert (userName + 'your score is ' + score )
