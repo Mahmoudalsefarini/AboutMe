@@ -1,4 +1,9 @@
 'use strict';
+let score = 0;
+let userName = prompt('enter your Name ');
+{
+  alert('Welcome   ' + userName);
+}
 function travelQue(){
   let travil = prompt('Do you think i like to travil ?');
   switch (travil.toLowerCase()) {
@@ -6,6 +11,7 @@ function travelQue(){
   case 'y':
     //console.log('thats right i do like traviling');
     alert('thats right i do like traviling');
+    score++;
     break;
   case 'no':
   case 'n':
@@ -22,6 +28,7 @@ function ageQue(){
   case 'y':
   //console.log('thats not right , im 26');
     alert('thats not right , im 26');
+    score++;
     break;
   case 'no':
   case 'n':
@@ -38,6 +45,7 @@ function homeQue(){
   case 'y':
   //console.log('thats right , i live in Amman ');
     alert('thats right , i live in Amman');
+    score++;
     break;
   case 'no':
   case 'n':
@@ -54,6 +62,7 @@ function tallQue(){
   case 'y':
   //console.log('thats right');
     alert('thats right ');
+    score++;
     break;
   case 'no':
   case 'n':
@@ -70,6 +79,7 @@ function majorQue(){
   case 'y':
   //console.log('thats not right');
     alert('thats not right ');
+    score++;
     break;
   case 'no':
   case 'n':
@@ -79,7 +89,6 @@ function majorQue(){
   }
 }
 majorQue();
-let score = 0;
 function guessQue(){
 //let guessNumber = null;
   for (let x = 0; x < 4; x++) {
@@ -117,3 +126,6 @@ function cityQue(){
   return favCity;
 }
 cityQue();
+
+alert(userName + ' your score is ' + score);
+alert('see you again, ' + userName);
